@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Hola Mundo PHP</title>
+</head>
+<body>
+
+<?php /*echo "Hola Mundo PHP";
+
+print("Hola Mundo")
+print("Hola " . $_GET["nombre"]);*/
+
+if(isset($_GET["nombre"])){
+    print("Hola " . $_GET["nombre"]);
+}
+else{
+    print("Hola Anónimo");
+}
+
+?>
+
+</body>
+</html>
