@@ -3,7 +3,8 @@
 <title>Hola Mundo PHP</title>
 </head>
 <body>
-
+<img src="images.jpeg"></img>
+<br/>
 <?php /*echo "Hola Mundo PHP";
 
 print("Hola Mundo")
