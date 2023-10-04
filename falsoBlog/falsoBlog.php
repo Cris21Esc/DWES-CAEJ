@@ -3,24 +3,30 @@
 </head>
 
 <body>
-<?php 
- if(! isset($_REQUEST["enviar"])){
+<?php
+$mensaje = "Texto Vacío";
+ if(! isset($_REQUEST["enviar"])){  
+    if($mensaje == "Texto Vacio"){
+        $mensaje=$_REQUEST["texto"];
+    }
 ?>
         <form action="falsoBlog.php" method="post">
+            <label type="" name="blog"><?php echo $mensaje?></input><br>
             <input type="text" name="texto"/>   
             <input type="submit" name="enviar" value="Enviar"/>
         </form>
-        <?php
-        }
-        else{
-            echo "<p>Gracias por rellenar el formulario</p>";
-            echo "<p>Texto: " . $_REQUEST["texto"];
-            if($_REQUEST["texto"]==""){
-                echo "Texto Vacío";
-            }
-            echo "</p>";
-        }
+        <?php 
+        }else{
         ?>
+        <form action="falsoBlog.php" method="post">
+            <label type="" name="blog"><?php echo $mensaje?></input><br>
+            <input type="text" name="texto"/>   
+            <input type="submit" name="enviar" value="Enviar"/>
+        </form>
+        <?
+        }
+    ?>
+        
 </body>
 </html>
 </body>
